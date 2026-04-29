@@ -1,0 +1,19 @@
+using System;
+using Bogus; 
+
+namespace MeuExercicio
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var faker = new Faker("pt_BR");
+
+            var nome = faker.Name.FullName();
+            var email = faker.Internet.Email();
+            var endereco = faker.Address.FullAddress();
+
+            Console.WriteLine($"{nome}\n{email}\n{endereco}");
+        }
+    }
+}
